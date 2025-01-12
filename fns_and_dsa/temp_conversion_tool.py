@@ -19,7 +19,7 @@ def temp_conv():
     elif temperature_type == "C":
         print(f"{temperature}°C is equivalent to {convert_to_fahrenheit(temperature):.2f}°F.")
     else:
-        print("Invalid input. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+        print("Invalid temperature. Please enter a numeric value.")
 
 # Run the conversion tool
 temp_conv()
