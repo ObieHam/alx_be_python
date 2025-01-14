@@ -14,5 +14,5 @@ class BankAccount:
             print("Amount to be withdrawn is larger than the account balance. Cannot proceed.")
     
     def display_balance(self):
-        print(self.account_balance)
+        print(f"Current Balance: {self.account_balance}")
     
