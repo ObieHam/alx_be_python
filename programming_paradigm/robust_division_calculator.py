@@ -7,5 +7,4 @@ def safe_divide(numerator, denominator):
         return "Error: Please enter numeric values only."
     else:
         # Only print the result in the else block if division was successful
-        print(f"The result of the division is {result}")
-        return result  # Return the result if needed
+        return f"The result of the division is {result}"
