@@ -8,3 +8,4 @@ def safe_divide(numerator, denominator):
     else:
         # Only print the result in the else block if division was successful
         print(f"The result of the division is {result}")
+        return result  # Return the result if needed
