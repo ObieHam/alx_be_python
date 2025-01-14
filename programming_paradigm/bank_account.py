@@ -13,6 +13,6 @@ class BankAccount:
             print("Amount to be withdrawn is larger than the account balance. Cannot proceed.")
     
     def display_balance(self):
-        balance = float(self.account_balance)
-        print(f"Current Balance: ${balance}")
+        balance = self.account_balance
+        print(f"Current Balance: ${balance:.2f}")
     
