@@ -4,7 +4,7 @@ from simple_calculator import SimpleCalculator
 class SimpleCalculatorTest(unittest.TestCase):
     def setUp(self):
         """Create a SimpleCalculator instance."""
-        self.calc = SimpleCalculator()  # Note the attribute is renamed to `self.calc`
+        self.calc = SimpleCalculator()  # Attribute named `calc` as required
 
     def test_addition(self):
         """Test addition operation."""
@@ -32,4 +32,12 @@ class SimpleCalculatorTest(unittest.TestCase):
 
     def test_division(self):
         """Test division operation."""
-       
+        self.assertEqual(self.calc.divide(1, 1), 1)
+        self.assertEqual(self.calc.divide(1, -1), -1)
+        self.assertEqual(self.calc.divide(1, 0), None)
+        self.assertEqual(self.calc.divide(0, 1), 0)
+        self.assertEqual(self.calc.divide(1, 0.5), 2)
+        self.assertEqual(self.calc.divide(5, 2), 2.5)
+
+if __name__ == "__main__":
+    unittest.main()
