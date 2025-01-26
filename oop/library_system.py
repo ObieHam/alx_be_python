@@ -15,6 +15,16 @@ class Book:
     self.title = title
     self.author = author
 
+  def __str__(self):
+    """
+    Returns a string representation of the book in a general format.
+
+    Returns:
+      str: A string in the format "Book: Title by Author".
+    """
+
+    return f"Book: {self.title} by {self.author}"
+
 class EBook(Book):
   """
   A derived class representing an electronic book with additional file size attribute.
@@ -33,6 +43,16 @@ class EBook(Book):
     super().__init__(title, author)
     self.file_size = file_size
 
+  def __str__(self):
+    """
+    Returns a string representation of the EBook with specific details.
+
+    Returns:
+      str: A string in the format "EBook: Title by Author, File Size: X KB".
+    """
+
+    return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
+
 class PrintBook(Book):
   """
   A derived class representing a printed book with additional page count attribute.
@@ -50,6 +70,16 @@ class PrintBook(Book):
 
     super().__init__(title, author)
     self.page_count = page_count
+
+  def __str__(self):
+    """
+    Returns a string representation of the PrintBook with specific details.
+
+    Returns:
+      str: A string in the format "PrintBook: Title by Author, Page Count: X".
+    """
+
+    return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 class Library:
   """
@@ -79,12 +109,7 @@ class Library:
     """
 
     for book in self.books:
-      if isinstance(book, EBook):
-        print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
-      elif isinstance(book, PrintBook):
-        print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
-      else:
-        print(f"Book: {book.title} by {book.author}")
+      print(book)  # Use the __str__ method of each book object
 
 # Example usage (can be placed in a separate script)
 if __name__ == "__main__":
@@ -98,8 +123,4 @@ if __name__ == "__main__":
 
   # Add books to the library
   my_library.add_book(classic_book)
-  my_library.add_book(digital_novel)
-  my_library.add_book(paper_novel)
-
-  # List all books in the library
-  my_library.list_books()
+  my_library.add_book(digital_novel
