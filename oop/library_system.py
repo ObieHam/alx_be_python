@@ -111,16 +111,14 @@ class Library:
     for book in self.books:
       print(book)  # Use the __str__ method of each book object
 
-# Example usage (can be placed in a separate script)
+# Example usage (within the class definition)
 if __name__ == "__main__":
-  # Create a Library instance
-  my_library = Library()
-
   # Create instances of each type of book
   classic_book = Book("Pride and Prejudice", "Jane Austen")
   digital_novel = EBook("Snow Crash", "Neal Stephenson", 500)
   paper_novel = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
 
-  # Add books to the library
-  my_library.add_book(classic_book)
-  my_library.add_book(digital_novel
+  # Print book details directly after creation (instead of adding to a library)
+  print(classic_book)
+  print(digital_novel)
+  print(paper_novel)
